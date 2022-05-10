@@ -7,11 +7,16 @@ function Header() {
   return (
     <nav className="header-container">
         <ul className="header-ul">
-            <li className="header-li">HOME</li>
-            <li className="header-li">EXERCICES</li>
-            <li className="header-li">PROJETS</li>
-            <li className="header-li">CONTACT</li>
-            <li className="header-li">PROFIL</li>
+            <li className="header-li">
+              <button className="header-btn">HOME</button></li>
+            <li className="header-li">
+              <button className="header-btn">EXERCICES</button></li>
+            <li className="header-li">
+              <button className="header-btn">PROJETS</button></li>
+            <li className="header-li">
+              <button className="header-btn">CONTACT</button></li>
+            <li className="header-li">
+              <button className="header-btn">PROFIL</button></li>
         </ul>
     </nav>
   )

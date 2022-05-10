@@ -10,7 +10,6 @@ function Footer() {
         <li className="footer-li">Github</li>
         <li className="footer-li">Linkedin</li>
       </ul>
-      <p className="footer-p">Tous droits réservés</p>
     </nav>
   )
 }
