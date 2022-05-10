@@ -1,0 +1,28 @@
+.footer-container {
+    position: relative;
+    display: flex;
+    width: auto;
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    bottom: 0;
+    border: 4px solid black;
+}
+
+.footer-ul {
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    border: 2px solid red;
+}
+
+.footer-p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid lime;
+}
