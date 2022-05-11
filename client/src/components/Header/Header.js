@@ -1,9 +1,17 @@
 // Header including Navbar, Navlinks, Logo for the whole
 
+import { useNavigate } from 'react-router-dom'
 import './header.scss'
 
 
 function Header() {
+
+  const navigate = useNavigate();
+  const routeChange = () => {
+    let path = `/login`;
+    navigate(path)
+  }
+
   return (
     <nav className="header-container">
         <ul className="header-ul">
@@ -16,7 +24,7 @@ function Header() {
             <li className="header-li">
               <button className="header-btn">CONTACT</button></li>
             <li className="header-li">
-              <button className="header-btn">PROFIL</button></li>
+              <button className="header-btn" onClick={routeChange}>CONNEXION</button></li>
         </ul>
     </nav>
   )
