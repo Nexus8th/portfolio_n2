@@ -1,7 +1,7 @@
 .footer-container {
     position: fixed;
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 12vh;
     min-height: 12vh;
     justify-content: center;
@@ -18,4 +18,8 @@
     justify-content: space-around;
     list-style-type: none;
     border: 2px solid red;
+}
+
+.footer-a {
+    text-decoration: none;
 }
