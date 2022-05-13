@@ -19,7 +19,9 @@ function Signup() {
     <Header/>
     <form className="signup-form" action="" method="get">
       <h1 className="signup-h1">Inscription</h1>
-      <label className="signup-label" htmlFor="email">Identifiant</label>
+      <label className="signup-label" htmlFor="username">Pseudo</label>
+      <input className="signup-input" type="username" name="username" required></input>
+      <label className="signup-label" htmlFor="email">Email</label>
       <input className="signup-input" type="email" name="email" required></input>
       <label className="signup-label" htmlFor="password">Mot de passe</label>
       <input className="signup-input" type="password" name="password" required></input>

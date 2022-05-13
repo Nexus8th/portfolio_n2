@@ -19,7 +19,7 @@ function Login() {
     <Header/>
     <form className="login-form" action="" method="get">
       <h1 className="login-h1">Connexion</h1>
-      <label className="login-label" htmlFor="email">Identifiant</label>
+      <label className="login-label" htmlFor="email">Email</label>
       <input className="login-input" type="email" name="email" required></input>
       <label className="login-label" htmlFor="password">Mot de passe</label>
       <input className="login-input" type="password" name="password" required></input>
