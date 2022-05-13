@@ -4,7 +4,9 @@ require('dotenv').config({path: './config/.env'})
 require('./config/db')
 const app = express()
 
+
 //routes
+app.use(express.json())
 app.use('/api/user', userRoutes)
 
 
