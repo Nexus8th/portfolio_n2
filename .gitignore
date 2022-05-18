@@ -26,3 +26,4 @@ server/config/.env
 config/.env
 *.env
 */node_modules
+*node_modules
