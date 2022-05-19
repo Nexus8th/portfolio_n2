@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://adminOCR:z9Jjgo7NdSXXoPV1@mern-fullstack.xswz4.mongodb.net/mern-crud', {
+mongoose.connect("mongodb+srv://" + process.env.DB_USER_PASS + "@mern-fullstack.xswz4.mongodb.net/mern-crud", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
