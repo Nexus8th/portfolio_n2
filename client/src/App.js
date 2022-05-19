@@ -22,8 +22,12 @@ function App() {
         url: `${process.env.REACT_APP_API_URL}jwtid`,
         withCredentials: true
       })
-      .then((res) => setUid(res.data))
-      .catch((err) => console.log("No token"))
+      .then((res) => {
+        setUid(res.data)
+      })
+      .catch((err) => {
+        console.log("No token")
+      })
     }
     fetchToken()
   }, [uid])

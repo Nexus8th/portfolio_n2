@@ -6,6 +6,9 @@ function Dashboard() {
   return (
     <>
         <Header/>
+        <div className="dashboard-container">
+          Profil Details
+        </div>
         <Footer/>
     </>
   )
