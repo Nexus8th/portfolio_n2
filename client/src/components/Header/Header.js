@@ -60,8 +60,12 @@ function Header() {
             <li className="header-li">
               <button className="header-btn" onClick={contactRoute}>CONTACT</button></li>
             {uid ? (
-              <li className="header-li">
-                <button className="header-btn" onClick={dashboardRoute}>DASHBOARD</button></li>
+              <>
+                <li className="header-li">
+                  <button className="header-btn" onClick={dashboardRoute}>DASHBOARD</button></li>
+                <li className="header-li">
+                <button className="header-btn">LOGOUT</button></li>
+              </>
             ) : (
               <li className="header-li">
                 <button className="header-btn" onClick={loginRoute}>CONNEXION</button></li>

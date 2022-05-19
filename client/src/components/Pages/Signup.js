@@ -5,8 +5,10 @@ import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import axios from 'axios'
 import { useState } from 'react'
+import Login from './Login'
 
 function Signup() {
+  const [formSubmit, setFormSubmit] = useState(false)
 
   const [pseudo, setPseudo] = useState('')
   const [email, setEmail] = useState('')
@@ -49,6 +51,8 @@ function Signup() {
           pseudoError.innerHTML = res.data.errors.pseudo
           emailError.innerHTML = res.data.errors.email
           passwordError.innerHTML = res.data.errors.password
+        } else {
+          setFormSubmit(true)
         }
       })
       .catch((err) => {
@@ -59,32 +63,42 @@ function Signup() {
 
   return (
     <>
-    <Header/>
-    <form className="signup-form" action="" method="get" onSubmit={handleRegister}>
+      {formSubmit ? (
+        <>
+          <Login/>
+          <h4>Enregistrement réussi, veuillez vous connecter</h4>
+        </>
+        ) : (
+        <>
+          <Header/>
+          <form className="signup-form" action="" method="get" onSubmit={handleRegister}>
 
-      <h1 className="signup-h1">Inscription</h1>
+            <h1 className="signup-h1">Inscription</h1>
 
-      <label className="signup-label" htmlFor="pseudo">Pseudo</label>
-      <input className="signup-input" type="text" name="pseudo" required onChange={(e) => setPseudo(e.target.value)} value={pseudo}></input>
-      <div className="signup-pseudo-error"></div>
+            <label className="signup-label" htmlFor="pseudo">Pseudo</label>
+            <input className="signup-input" type="text" name="pseudo" required onChange={(e) => setPseudo(e.target.value)} value={pseudo}></input>
+            <div className="signup-pseudo-error"></div>
 
-      <label className="signup-label" htmlFor="email">Email</label>
-      <input className="signup-input" type="text" name="email" required onChange={(e) => setEmail(e.target.value)} value={email}></input>
-      <div className="signup-email-error"></div>
+            <label className="signup-label" htmlFor="email">Email</label>
+            <input className="signup-input" type="text" name="email" required onChange={(e) => setEmail(e.target.value)} value={email}></input>
+            <div className="signup-email-error"></div>
 
-      <label className="signup-label" htmlFor="password">Mot de passe</label>
-      <input className="signup-input" type="password" name="password" required onChange={(e) => setPassword(e.target.value)} value={password}></input>
-      <div className="signup-password-error"></div>
+            <label className="signup-label" htmlFor="password">Mot de passe</label>
+            <input className="signup-input" type="password" name="password" required onChange={(e) => setPassword(e.target.value)} value={password}></input>
+            <div className="signup-password-error"></div>
 
-      <label className="signup-label" htmlFor="control-password">Confirmez le mot de passe</label>
-      <input className="signup-input" type="password" name="password" required onChange={(e) => setControlPassword(e.target.value)} value={controlPassword}></input>
-      <div className="signup-controlpassword-error"></div>
+            <label className="signup-label" htmlFor="control-password">Confirmez le mot de passe</label>
+            <input className="signup-input" type="password" name="password" required onChange={(e) => setControlPassword(e.target.value)} value={controlPassword}></input>
+            <div className="signup-controlpassword-error"></div>
 
-      <button className="signup-btn" type="submit">S'inscrire</button>
-    </form>
+            <button className="signup-btn" type="submit">S'inscrire</button>
+          </form>
 
-    <p className="signup-p">Déjà inscrit? <a className="signup-a" href="# " onClick={loginRoute}>Connectez-vous!</a></p>
-    <Footer/>
+          <p className="signup-p">Déjà inscrit? <a className="signup-a" href="# " onClick={loginRoute}>Connectez-vous!</a></p>
+          <Footer/>
+        </>
+        )
+      }
     </>
   )
 }
