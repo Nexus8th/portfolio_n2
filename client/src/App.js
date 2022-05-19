@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home/Home'
-import Login from './components/Pages/Login'
-import Signup from './components/Pages/Signup';
-import Exercices from './components/Pages/Exercices';
-import Projets from './components/Pages/Projets';
-import Contact from './components/Pages/Contact';
-import Dashboard from './components/Pages/Dashboard';
+import Login from './Pages/Login'
+import Signup from './Pages/Signup';
+import Exercices from './Pages/Exercices';
+import Projets from './Pages/Projets';
+import Contact from './Pages/Contact';
+import Dashboard from './Pages/Dashboard';
 import { UidContext } from './components/Context/AppContext';
 import { useEffect, useState } from 'react';
 import axios from 'axios'

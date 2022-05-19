@@ -1,8 +1,8 @@
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 import { useContext } from 'react'
-import { UidContext } from '../Context/AppContext'
-import Home from '../Home/Home'
+import { UidContext } from '../components/Context/AppContext'
+import Home from '../components/Home/Home'
 
 
 function Dashboard() {

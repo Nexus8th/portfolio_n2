@@ -1,8 +1,8 @@
 // Signup Page 
 
 import { useNavigate } from 'react-router-dom'
-import Footer from '../Footer/Footer'
-import Header from '../Header/Header'
+import Footer from '../components/Footer/Footer'
+import Header from '../components/Header/Header'
 import axios from 'axios'
 import { useState } from 'react'
 import Login from './Login'
