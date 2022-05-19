@@ -1,10 +1,14 @@
 // Header including Navbar, Navlinks, Logo for the whole
 
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom'
+import { UidContext } from '../Context/AppContext';
 import './header.scss'
 
 
 function Header() {
+
+  const uid = useContext(UidContext)
 
   const navigate = useNavigate();
 
@@ -38,6 +42,12 @@ function Header() {
     navigate(path)
   }
 
+  // func to navigate to Dashboard page
+  const dashboardRoute = () => {
+    let path = `/dashboard`
+    navigate(path)
+  }
+
   return (
     <nav className="header-container">
         <ul className="header-ul">
@@ -49,8 +59,13 @@ function Header() {
               <button className="header-btn" onClick={projetsRoute}>PROJETS</button></li>
             <li className="header-li">
               <button className="header-btn" onClick={contactRoute}>CONTACT</button></li>
-            <li className="header-li">
-              <button className="header-btn" onClick={loginRoute}>CONNEXION</button></li>
+            {uid ? (
+              <li className="header-li">
+                <button className="header-btn" onClick={dashboardRoute}>DASHBOARD</button></li>
+            ) : (
+              <li className="header-li">
+                <button className="header-btn" onClick={loginRoute}>CONNEXION</button></li>
+            )}
         </ul>
     </nav>
   )
