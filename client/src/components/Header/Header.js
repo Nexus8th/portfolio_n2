@@ -65,7 +65,7 @@ function Header() {
                 <li className="header-li">
                   <button className="header-btn" onClick={dashboardRoute}>DASHBOARD</button></li>
                 <li className="header-li">
-                <button className="header-btn fa-solid fa-right-from-bracket"><Logout  /></button></li>
+                <button className="header-btn fa-solid fa-right-from-bracket"><Logout/></button></li>
               </>
             ) : (
               <li className="header-li">

@@ -6,10 +6,11 @@ export const getUser = (uid) => {
     return async (dispatch) => {
         try {
             const res = await axios
-                .get(`/api/user/${uid}`)
-            dispatch({ type: GET_USER, payload: res.data })
+                .get(`api/user/${uid}`)
+                dispatch({ type: GET_USER, payload: res.data })
+                console.log(res);
         } catch (err) {
             return console.log(err)
-        }
+        }  
     }
 }

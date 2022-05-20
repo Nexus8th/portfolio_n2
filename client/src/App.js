@@ -19,8 +19,8 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    const fetchToken = async() => {
-      await axios({
+    const fetchToken = () => {
+      axios({
         method: "get",
         url: `${process.env.REACT_APP_API_URL}jwtid`,
         withCredentials: true
@@ -35,7 +35,7 @@ function App() {
     fetchToken()
 
     if(uid) dispatch(getUser(uid))
-  }, [uid, dispatch])
+  }, [uid])
 
   return (
     <UidContext.Provider value={uid}>

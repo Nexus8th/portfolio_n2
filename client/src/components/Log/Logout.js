@@ -1,5 +1,6 @@
 import axios from 'axios'
 import cookie from "js-cookie"
+import './logout.scss'
 
 const Logout = () => {
 
@@ -21,8 +22,8 @@ const Logout = () => {
         window.location = "/"
     }
     return (
-        <li onClick={logout}>
-            <img src="./img/icons/logout.svg" alt=""/>
+        <li className="logout-li" onClick={logout}>
+            <img className="logout-icon" src="./img/logout.png" alt="logout"/>
         </li>
     );
 };
