@@ -36,6 +36,7 @@ function App() {
 
     if(uid) dispatch(getUser(uid))
   }, [uid])
+  
 
   return (
     <UidContext.Provider value={uid}>
