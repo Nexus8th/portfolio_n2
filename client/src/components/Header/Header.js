@@ -3,6 +3,7 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom'
 import { UidContext } from '../Context/AppContext';
+import Logout from '../Log/Logout';
 import './header.scss'
 
 
@@ -64,7 +65,7 @@ function Header() {
                 <li className="header-li">
                   <button className="header-btn" onClick={dashboardRoute}>DASHBOARD</button></li>
                 <li className="header-li">
-                <button className="header-btn">LOGOUT</button></li>
+                <button className="header-btn fa-solid fa-right-from-bracket"><Logout  /></button></li>
               </>
             ) : (
               <li className="header-li">
