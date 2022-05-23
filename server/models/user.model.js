@@ -24,7 +24,14 @@ const userSchema = new mongoose.Schema({
         required: true,
         max: 1024,
         minlength: 6
+    },
+    picture: {
+        type: String,
+        default: "./img/user.png"
     }
+},
+{
+    timestamps: true,
 })
 
 userSchema.pre("save", async function(next) {

@@ -1,7 +1,7 @@
 // Login Page
 
-import Footer from '../components/Footer/Footer'
-import Header from '../components/Header/Header'
+import Footer from '../Footer/Footer'
+import Header from '../Header/Header'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
