@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import { UidContext } from '../components/Context/AppContext'
 import Home from '../components/Home/Home'
 import { useSelector } from 'react-redux'
+import { dateParser } from '../components/Context/Utils'
 
 
 function Dashboard() {
@@ -22,7 +23,7 @@ function Dashboard() {
           <h3>Pseudo: {userData.pseudo}</h3>
           <h3>Email: {userData.email}</h3>
           <h3>userID: {userData._id}</h3>
-          <h3>Created at:</h3>
+          <h3>Created at: {dateParser(userData.createdAt)}</h3>
         </div>
         <Footer/>
         </>

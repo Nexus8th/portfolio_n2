@@ -22,9 +22,7 @@ const Logout = () => {
         window.location = "/"
     }
     return (
-        <li className="logout-li" onClick={logout}>
-            <img className="logout-icon" src="./img/logout.png" alt="logout"/>
-        </li>
+        <li className="logout-li" onClick={logout}></li>
     );
 };
 
