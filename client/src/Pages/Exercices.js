@@ -1,12 +1,15 @@
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
+import Thread from '../components/Context/Thread'
 
-
-function Exercices() {
+const Exercices = () => {
   return (
     <>
-        <Header/>
-        <Footer/>
+      <Header/>
+        <div>
+          <Thread/>
+        </div>        
+      <Footer/>
     </>
   )
 }

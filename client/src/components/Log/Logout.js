@@ -22,7 +22,7 @@ const Logout = () => {
         window.location = "/"
     }
     return (
-        <li className="logout-li" onClick={logout}></li>
+        <li className="logout-li" onClick={logout}>LOGOUT</li>
     );
 };
 

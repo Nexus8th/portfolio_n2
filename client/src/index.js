@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import rootReducer from "./reducers/index"
 import logger from "redux-logger"
 import { configureStore } from "@reduxjs/toolkit"
+import { getUsers } from './actions/users.actions';
 
 
 const store = configureStore({
@@ -12,6 +13,8 @@ const store = configureStore({
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
   }
 )
+
+store.dispatch(getUsers())
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
