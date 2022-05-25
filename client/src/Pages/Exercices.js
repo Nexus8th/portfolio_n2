@@ -6,9 +6,7 @@ const Exercices = () => {
   return (
     <>
       <Header/>
-        <div>
-          <Thread/>
-        </div>        
+      <Thread/>      
       <Footer/>
     </>
   )
