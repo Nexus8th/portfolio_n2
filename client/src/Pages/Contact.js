@@ -6,6 +6,7 @@ function Contact() {
   return (
     <>
         <Header/>
+        contact
         <Footer/>
     </>
   )

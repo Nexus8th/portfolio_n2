@@ -10,7 +10,6 @@ import './header.scss'
 function Header() {
 
   const uid = useContext(UidContext)
-
   const navigate = useNavigate();
 
   // func to navigate to Login page
@@ -57,7 +56,7 @@ function Header() {
             <li className="header-li">
               <button className="header-btn" onClick={exercicesRoute}>EXERCICES</button></li>
             <li className="header-li">
-              <button className="header-btn" onClick={projetsRoute}>PROJETS</button></li>
+              <button className="header-btn" onClick={projetsRoute}>PROJECTS</button></li>
             <li className="header-li">
               <button className="header-btn" onClick={contactRoute}>CONTACT</button></li>
             {uid ? (

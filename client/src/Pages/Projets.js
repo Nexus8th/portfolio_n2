@@ -6,6 +6,7 @@ function Projets() {
   return (
     <>
         <Header/>
+        projects
         <Footer/>
     </>
   )
