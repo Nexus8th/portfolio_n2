@@ -5,7 +5,7 @@ import { isEmpty } from "../Context/Utils";
 
 const NewPostForm = () => {
     const [isLoading, setIsLoading] = useState(true)
-    const [message, setMessage] = useState("")
+    const [message, setMessage] = useState('')
     const dispatch = useDispatch()
 
     const userData = useSelector((state) => state.userReducer)
@@ -43,7 +43,7 @@ const NewPostForm = () => {
                         <textarea
                             name="message"
                             id="message"
-                            placeholder="Ajouter un article"
+                            placeholder="ADD AN ARTICLE"
                             onChange={(e) => setMessage(e.target.value)}
                             value={message}
                         />

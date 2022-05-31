@@ -4,7 +4,7 @@ const PostSchema = new mongoose.Schema(
     {
         posterId: {
             type: String,
-            required: true
+            /* required: true */
         },
         message: {
             type: String,
