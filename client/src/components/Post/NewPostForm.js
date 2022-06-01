@@ -17,7 +17,7 @@ const NewPostForm = () => {
             data.append('message', message)
 
             await 
-            dispatch(addPost(data))
+            dispatch(addPost(userData._id, message))
             dispatch(getPosts())
             cancelPost()
         } else {
@@ -26,12 +26,13 @@ const NewPostForm = () => {
     }
 
     const cancelPost = () => {
-        setMessage('')
+        setMessage("")
     }
 
     useEffect(() => {
-        if (!isEmpty(userData)) setIsLoading(false)
-    }, [userData])
+        if (!isEmpty(userData)) 
+        setIsLoading(false)
+    }, [userData, message])
 
     return (
         <div className="post-container">

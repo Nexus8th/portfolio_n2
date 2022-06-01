@@ -20,15 +20,17 @@ export const getPosts = (num) => {
   };
 };
 
-export const addPost = (data) => {
-  return async (dispatch) => {
-    const res = await axios
-      .post(`${process.env.REACT_APP_API_URL}api/post/`, data);
-    if (res.data.errors) {
-      dispatch({ type: GET_POST_ERRORS, payload: res.data.errors });
-    } else {
-      dispatch({ type: GET_POST_ERRORS, payload: "" });
-    }
+export const addPost = (posterId, message) => {
+  return (dispatch) => {
+    return axios({
+      method: "post",
+      url: `${process.env.REACT_APP_API_URL}api/post/`,
+      data: {posterId, message}
+    })
+    .then((res) => {
+      dispatch({ type: ADD_POST, payload: {posterId, message}})
+    })
+    .catch((err) => console.log(err.response))
   }
 }
 
