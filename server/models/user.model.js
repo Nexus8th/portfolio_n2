@@ -28,11 +28,11 @@ const userSchema = new mongoose.Schema({
     picture: {
         type: String,
         default: "./img/user.png"
-    },
+    }/* ,
     role: {
         type: String,
         default: "admin"
-    }
+    } */
 },
 {
     timestamps: true,
