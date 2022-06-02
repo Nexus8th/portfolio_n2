@@ -2,13 +2,14 @@
     position: fixed;
     display: flex;
     width: 100vw;
-    height: 12vh;
-    min-height: 12vh;
+    height: 10vh;
+    min-height: 10vh;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     bottom: 0;
     background-color: rgba($color: #17171f, $alpha: 1.0);
+    opacity: 0.9;
 }
 
 .footer-ul {
@@ -24,6 +25,8 @@
     cursor: pointer;
     padding: 5px 5px;
     font-family: 'Roboto', sans-serif;
+    background-color: rgba($color: #17171f, $alpha: 1.0);
+    opacity: 0.9;
     text-decoration: none;
     color: #fff;
     font-size: 15px;

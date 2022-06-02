@@ -1,0 +1,19 @@
+.card-li-container {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    margin: 10px 0 10px 0
+
+}
+
+.card-post-guest {
+    border: 2px solid red;
+}
+
+.card-post-message {
+    border: 2px solid black;
+}

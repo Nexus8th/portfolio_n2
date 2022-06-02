@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updatePost } from "../../actions/post.actions";
 import { isEmpty } from "../Context/Utils";
-import "./card.scss";
+import "./Card.scss";
 import DeleteCard from "./DeleteCard";
 
 const Card = ({ post }) => {

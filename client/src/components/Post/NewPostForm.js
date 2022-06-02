@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addPost, getPosts } from "../../actions/post.actions";
 import { isEmpty } from "../Context/Utils";
+import './NewPostForm.scss'
 
 const NewPostForm = () => {
     const [isLoading, setIsLoading] = useState(true)
@@ -52,6 +53,7 @@ const NewPostForm = () => {
 
                     <div className="btn-send">
                         <button className="send" onClick={handlePost}>SEND</button>
+
                         {message ? (
                             <button className="cancel" onClick={cancelPost}>CANCEL</button>
                         ) : null}
