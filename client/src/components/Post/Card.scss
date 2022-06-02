@@ -1,19 +1,32 @@
 .card-li-container {
     position: relative;
     display: flex;
-    width: 50%;
-    height: 100vh;
+    width: 100vh;
+    min-width: 100vh;
+    height: 50vh;
+    min-height: 50vh;
     justify-content: center;
     align-items: center;
     border: 2px solid black;
-    margin: 10px 0 10px 0
+    margin: 40px 0 20px 0;
+    background: grey;
 
 }
 
 .card-post-guest {
+    position: relative;
+    display: flex;
     border: 2px solid red;
 }
 
+.card-post-container {
+    position: relative;
+    display: flex;
+    border: 2px solid lime;
+}
+
 .card-post-message {
+    position: relative;
+    display: flex;
     border: 2px solid black;
 }
