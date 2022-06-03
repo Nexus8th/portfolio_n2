@@ -50,7 +50,6 @@ const NewPostForm = () => {
                             value={message}
                         />
                     </div>
-
                     <div className="btn-send">
                         <button className="send" onClick={handlePost}>SEND</button>
 
