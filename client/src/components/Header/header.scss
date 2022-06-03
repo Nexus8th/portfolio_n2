@@ -2,14 +2,14 @@
     position: relative;
     display: flex;
     width: auto;
-    height: 12vh;
-    min-height: 12vh;
+    height: 9vh;
+    min-height: 9vh;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     top: 0;
     background-color: rgba($color: #17171f, $alpha: 1.0);
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .header-ul {
@@ -30,6 +30,7 @@
     background-color: rgba($color: #17171f, $alpha: 1.0);
     opacity: 0.9;
     border: none;
+    font-weight: 800;
     color: #fff;
     padding: 5px 5px;
     text-align: center;
