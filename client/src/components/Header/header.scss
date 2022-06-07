@@ -1,3 +1,9 @@
+$bgcolor1: #17171f;
+$bgcolor2: rgb(153,0,0);
+$bgcolor3: rgb(5,5,5);
+
+
+
 .header-container{
     position: relative;
     display: flex;
@@ -8,7 +14,7 @@
     align-items: center;
     text-decoration: none;
     top: 0;
-    background-color: rgba($color: #17171f, $alpha: 1.0);
+    background-color: $bgcolor1;
     opacity: 0.8;
 }
 
@@ -28,7 +34,7 @@
     font-family: 'Roboto', sans-serif;
     position: relative;
     cursor: pointer;
-    background-color: rgba($color: #17171f, $alpha: 1.0);
+    background-color: $bgcolor1;
     opacity: 0.9;
     border: none;
     font-weight: 600;
@@ -49,7 +55,7 @@
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: rgb(153, 0, 0);
+        background-color: $bgcolor2;
         transform-origin: bottom right;
         transition: transform 0.3s ease-in-out;
     }
@@ -64,5 +70,6 @@
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: rgb(153, 0, 0);
+    background-color: $bgcolor2;
+    box-shadow: 2px 2px 6px 2px $bgcolor3;
 }

@@ -16,7 +16,7 @@ body {
 }
 
 
-.login-all-container {
+.signup-all-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ body {
     align-items: center;
 }
 
-.login-form {
+.signup-form {
     position: relative;
     display: flex;
     justify-content: center;
@@ -42,19 +42,19 @@ body {
     box-shadow: 3px 3px 4px 2px $bgcolor3, -2px -2px 4px $bgcolor3;
 }
 
-.login-h1 {
+.signup-h1 {
     position: relative;
     display: flex;
     margin-bottom: 25px;
     text-shadow: 2px 2px $bgcolor3;
 }
 
-.login-label {
+.signup-label {
     margin: 0 0 10px 0;
     text-shadow: 2px 2px $bgcolor3;
 }
 
-.login-input {
+.signup-input {
     margin: 0 0 10px 0;
     border: none;
     border-radius: 4px;
@@ -64,14 +64,14 @@ body {
     box-shadow: 2px 2px 2px 1px $bgcolor3;
 }
 
-.login-btn {
+.signup-btn {
     margin: 10px 0 10px 0;
     background: transparent;
     border: none;
     color: white;
     font-weight: 900;
     background: #047e29;
-    padding: 5px 7px 5px 7px;
+    padding: 5px 7px 6px 7px;
     border-radius: 5px;
     cursor: pointer;
     opacity: 1;
@@ -81,7 +81,7 @@ body {
     text-shadow: 1.5px 1.5px $bgcolor3;
 }
 
-.login-p {
+.signup-p {
     margin-top: 25px;
     display: flex;
     justify-content: center;
@@ -90,14 +90,14 @@ body {
     margin-bottom: 15px;
 }
 
-.login-a {
+.signup-a {
     text-decoration: none;
     display: flex;
     font-size: large;
     font-weight: 600;
     color: white;
     background: $bgcolor2;
-    padding: 3px 7px 4px 3px;
+    padding: 3px 7px 4px 5px;
     border-radius: 5px;
     opacity: 0.9;
     box-shadow: 2px 2px 2px 1px $bgcolor3;
@@ -107,6 +107,6 @@ body {
 
 // errors messages
 
-.login-email-error, .login-password-error {
+.signup-pseudo-error, .signup-email-error, .signup-password-error, .signup-controlpassword-error {
     color: crimson;
 }

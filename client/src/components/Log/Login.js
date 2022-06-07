@@ -51,21 +51,24 @@ function Login() {
     <Header/>
     <div className="login-all-container">
       <form className="login-form" action="" method="get" onSubmit={handleLogin}>
-        <h1 className="login-h1">Connexion</h1>
-        <label className="login-label" htmlFor="email">Mail</label>
-        <input className="login-input" type="text" name="email" required onChange={(e) => setEmail(e.target.value)} value={email}></input>
 
+        <h1 className="login-h1">Connection</h1>
+
+        <label className="login-label" htmlFor="email">Mail</label>
         {/* Handling email errors messages display */}
         <div className="login-email-error"></div>
+        <input className="login-input" type="text" name="email" required onChange={(e) => setEmail(e.target.value)} value={email}></input>
+
 
         <label className="login-label" htmlFor="password">Password</label>
-        <input className="login-input" type="password" name="password" onChange={(e) => setPassword(e.target.value)} value={password}></input>
-
         {/* Handling password errors messages display */}
         <div className="login-password-error"></div>
+        <input className="login-input" type="password" name="password" onChange={(e) => setPassword(e.target.value)} value={password}></input>
 
-        <button className="login-btn" type="submit">Connection</button>
-        <p className="login-p">New member?&nbsp;<a className="login-a" href="# " onClick={signupRoute}>&nbsp;Sign-up!</a></p>
+
+        <button className="login-btn" type="submit">Login</button>
+
+        <p className="login-p">New member?&nbsp;<a className="login-a" href="# " onClick={signupRoute}>&nbsp;Sign-up here!</a></p>
       </form>
     </div>
     <Footer/>
