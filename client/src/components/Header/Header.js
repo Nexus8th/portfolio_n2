@@ -17,7 +17,7 @@ function Header() {
             <li className="header-li">
               <NavLink to="/" className={({ isActive }) => (isActive ? "link-active header-btn" : "link header-btn")}>HOME</NavLink></li>
             <li className="header-li">
-            <NavLink to="/exercices" className={({ isActive }) => (isActive ? "link-active header-btn" : "link header-btn")}>EXERCICES</NavLink></li>
+            <NavLink to="/exercices" className={({ isActive }) => (isActive ? "link-active header-btn" : "link header-btn")}>EXERCISES</NavLink></li>
             <li className="header-li">
             <NavLink to="/projets" className={({ isActive }) => (isActive ? "link-active header-btn" : "link header-btn")}>PROJECTS</NavLink></li>
             <li className="header-li">

@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import './login.scss'
 import axios from 'axios'
 
 function Login() {
@@ -48,23 +49,25 @@ function Login() {
   return (
     <>
     <Header/>
-    <form className="login-form" action="" method="get" onSubmit={handleLogin}>
-      <h1 className="login-h1">Connexion</h1>
-      <label className="login-label" htmlFor="email">Email</label>
-      <input className="login-input" type="text" name="email" required onChange={(e) => setEmail(e.target.value)} value={email}></input>
+    <div className="login-all-container">
+      <form className="login-form" action="" method="get" onSubmit={handleLogin}>
+        <h1 className="login-h1">Connexion</h1>
+        <label className="login-label" htmlFor="email">Mail</label>
+        <input className="login-input" type="text" name="email" required onChange={(e) => setEmail(e.target.value)} value={email}></input>
 
-      {/* Handling email errors messages display */}
-      <div className="login-email-error"></div>
+        {/* Handling email errors messages display */}
+        <div className="login-email-error"></div>
 
-      <label className="login-label" htmlFor="password">Mot de passe</label>
-      <input className="login-input" type="password" name="password" onChange={(e) => setPassword(e.target.value)} value={password}></input>
+        <label className="login-label" htmlFor="password">Password</label>
+        <input className="login-input" type="password" name="password" onChange={(e) => setPassword(e.target.value)} value={password}></input>
 
-      {/* Handling password errors messages display */}
-      <div className="login-password-error"></div>
+        {/* Handling password errors messages display */}
+        <div className="login-password-error"></div>
 
-      <button className="login-btn" type="submit">Connexion</button>
-    </form>
-    <p className="login-p">Nouveau? <a className="login-a" href="# " onClick={signupRoute}>Inscrivez-vous!</a></p>
+        <button className="login-btn" type="submit">Connection</button>
+        <p className="login-p">New member?&nbsp;<a className="login-a" href="# " onClick={signupRoute}>&nbsp;Sign-up!</a></p>
+      </form>
+    </div>
     <Footer/>
     </>
   )
