@@ -31,7 +31,7 @@ function Header() {
               </>
             ) : (
               <li className="header-li">
-                <NavLink to="/login" className={({ isActive }) => (isActive ? "link-active header-btn" : "link header-btn")}>CONNEXION</NavLink></li>
+                <NavLink to="/login" className={({ isActive }) => (isActive ? "link-active header-btn success" : "link header-btn success")}>CONNEXION</NavLink></li>
             )}
         </ul>
     </nav>

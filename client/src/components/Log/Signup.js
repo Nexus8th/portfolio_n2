@@ -7,7 +7,6 @@ import axios from 'axios'
 import { useState } from 'react'
 import Login from './Login'
 import './signup.scss'
-import { useLocation } from 'react-router-dom'
 
 
 function Signup() {
@@ -64,8 +63,6 @@ function Signup() {
     }
   }
 
-  const {pathname} = useLocation()
-
   return (
     <>
       {formSubmit ? (
@@ -75,7 +72,7 @@ function Signup() {
         </>
         ) : (
           <>
-          <Header isActive={() => ['/login', '/signup'].includes(pathname)}/>
+          <Header/>
           <div className="signup-all-container">
             <form className="signup-form" action="" method="get" onSubmit={handleRegister}>
 

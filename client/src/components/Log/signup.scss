@@ -106,11 +106,26 @@ body {
 
 .signup-register-success {
     color: $bgcolor4;
-    position: absolute;
-    display: flex;
     justify-self: center;
     align-items: center;
     align-self: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 25px;
+    margin: 15px;
+    margin-left: 30%;
+    padding: 0;
+    font-family: $font;
+    background-color: $bgcolor1;
+    opacity: 0.9;
+    border-radius: 8px;
+    box-shadow: 3px 3px 4px 2px $bgcolor3, -2px -2px 4px $bgcolor3;
+    text-shadow: 2px 2px $bgcolor3;
+    font-weight: 900;
 }
 
 

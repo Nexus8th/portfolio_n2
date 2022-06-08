@@ -1,0 +1,43 @@
+$font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$bgcolor1: #17171f;
+$bgcolor2: rgb(153,0,0);
+$bgcolor3: rgb(5,5,5);
+
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../public/img/art-g392add423_1920.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.dashboard-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    min-height: 60vh;
+    margin: 50px 0 25px 0;
+    padding: 0;
+    font-family: $font;
+    background-color: $bgcolor1;
+    color: white;
+    opacity: 0.9;
+    border-radius: 8px;
+    box-shadow: 3px 3px 4px 2px $bgcolor3, -2px -2px 4px $bgcolor3;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
+h2, h3 {
+    margin: 5px 0 5px 0;
+    text-shadow: 2px 2px $bgcolor3;
+}
