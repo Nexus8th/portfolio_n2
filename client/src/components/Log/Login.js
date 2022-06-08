@@ -47,32 +47,34 @@ function Login() {
   }
 
   return (
-    <>
-    <Header/>
-    <div className="login-all-container">
-      <form className="login-form" action="" method="get" onSubmit={handleLogin}>
+    <div className="login-background-parallax">
+      <>
+      <Header/>
+      <div className="login-all-container">
+        <form className="login-form" action="" method="get" onSubmit={handleLogin}>
 
-        <h1 className="login-h1">Connection</h1>
+          <h1 className="login-h1">Connection</h1>
 
-        <label className="login-label" htmlFor="email">Mail</label>
-        {/* Handling email errors messages display */}
-        <div className="login-email-error"></div>
-        <input className="login-input" type="text" name="email" required onChange={(e) => setEmail(e.target.value)} value={email}></input>
-
-
-        <label className="login-label" htmlFor="password">Password</label>
-        {/* Handling password errors messages display */}
-        <div className="login-password-error"></div>
-        <input className="login-input" type="password" name="password" onChange={(e) => setPassword(e.target.value)} value={password}></input>
+          <label className="login-label" htmlFor="email">Mail</label>
+          {/* Handling email errors messages display */}
+          <div className="login-email-error"></div>
+          <input className="login-input" type="text" name="email" required onChange={(e) => setEmail(e.target.value)} value={email}></input>
 
 
-        <button className="login-btn" type="submit">Login</button>
+          <label className="login-label" htmlFor="password">Password</label>
+          {/* Handling password errors messages display */}
+          <div className="login-password-error"></div>
+          <input className="login-input" type="password" name="password" onChange={(e) => setPassword(e.target.value)} value={password}></input>
 
-        <p className="login-p">New member?&nbsp;<a className="login-a" href="# " onClick={signupRoute}>&nbsp;Sign-up here!</a></p>
-      </form>
+
+          <button className="login-btn" type="submit">Login</button>
+
+          <p className="login-p">New member?&nbsp;<a className="login-a" href="# " onClick={signupRoute}>&nbsp;Sign-up here!</a></p>
+        </form>
+      </div>
+      <Footer/>
+      </>
     </div>
-    <Footer/>
-    </>
   )
 }
 
