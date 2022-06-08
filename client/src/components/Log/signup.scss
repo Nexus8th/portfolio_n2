@@ -2,6 +2,7 @@ $font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Ca
 $bgcolor1: #17171f;
 $bgcolor2: rgb(153,0,0);
 $bgcolor3: rgb(5,5,5);
+$bgcolor4: #047e29;
 
 
 body {
@@ -70,7 +71,7 @@ body {
     border: none;
     color: white;
     font-weight: 900;
-    background: #047e29;
+    background: $bgcolor4;
     padding: 5px 7px 6px 7px;
     border-radius: 5px;
     cursor: pointer;
@@ -103,10 +104,20 @@ body {
     box-shadow: 2px 2px 2px 1px $bgcolor3;
 }
 
+.signup-register-success {
+    color: $bgcolor4;
+    position: absolute;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    align-self: center;
+}
 
 
 // errors messages
 
 .signup-pseudo-error, .signup-email-error, .signup-password-error, .signup-controlpassword-error {
     color: crimson;
+    text-shadow: 2px 2px $bgcolor3;
+    font-weight: 900;
 }

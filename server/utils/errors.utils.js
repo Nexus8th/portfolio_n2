@@ -2,19 +2,19 @@ module.exports.signUpErrors = (err) => {
 
     let errors = { pseudo: '', email: '', password: ''}
     if (err.message.includes('pseudo')) 
-        errors.pseudo = "Pseudo incorrect ou déjà pris"
+        errors.pseudo = "Incorrect pseudo or already in use"
 
     if (err.message.includes('email'))
-        errors.email = "Email incorrect"
+        errors.email = "Incorrect mail"
 
     if (err.message.includes('password'))
-        errors.password = "Le mot de passe doit faire 6 caractères minimum"
+        errors.password = "Password should be atleast 6 digits"
 
     if (err.code === 11000 && Object.keys(err.keyValue)[0].includes('pseudo'))
-        errors.pseudo = "Ce pseudo est déjà utilisé"
+        errors.pseudo = "Pseudo already taken"
 
     if (err.code === 11000 && Object.keys(err.keyValue)[0].includes('email'))
-        errors.email = "Cet email est déjà utilisé"
+        errors.email = "Mail already taken"
 
     return errors
 }
@@ -24,10 +24,10 @@ module.exports.signInErrors = (err) => {
     let errors = { email: "", password: ""}
 
     if (err.message.includes("email"))
-        errors.email = "Email inconnu"
+        errors.email = "Mail unknown"
         
     if (err.message.includes("password"))
-        errors.password = "Mot de passe incorrect"
+        errors.password = "Incorrect password"
 
     return errors
 }

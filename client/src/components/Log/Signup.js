@@ -7,6 +7,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import Login from './Login'
 import './signup.scss'
+import { useLocation } from 'react-router-dom'
 
 
 function Signup() {
@@ -37,7 +38,7 @@ function Signup() {
     controlPasswordError.innerHTML = ""
 
     if (password !== controlPassword) {
-      controlPasswordError.innerHTML = "Les mots de passe ne correspondent pas"
+      controlPasswordError.innerHTML = "Passwords do not match !"
     } else {
       await axios ({
         method: "post",
@@ -63,16 +64,18 @@ function Signup() {
     }
   }
 
+  const {pathname} = useLocation()
+
   return (
     <>
       {formSubmit ? (
         <>
           <Login/>
-          <h4>Enregistrement réussi, veuillez vous connecter</h4>
+          <h4 className="signup-register-success">Register succesful, please Login !</h4>
         </>
         ) : (
-        <>
-          <Header/>
+          <>
+          <Header isActive={() => ['/login', '/signup'].includes(pathname)}/>
           <div className="signup-all-container">
             <form className="signup-form" action="" method="get" onSubmit={handleRegister}>
 

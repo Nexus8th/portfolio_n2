@@ -9,8 +9,6 @@ import './header.scss'
 
 function Header() {
 
-  const items = [{ route: "/login"}, { route: "/signup"}]
-
   const uid = useContext(UidContext)
   
   return (
@@ -33,7 +31,7 @@ function Header() {
               </>
             ) : (
               <li className="header-li">
-                <NavLink to={`/${items.route}`} className={({ isActive }) => (isActive ? "link-active header-btn" : "link header-btn")}>CONNEXION</NavLink></li>
+                <NavLink to="/login" className={({ isActive }) => (isActive ? "link-active header-btn" : "link header-btn")}>CONNEXION</NavLink></li>
             )}
         </ul>
     </nav>
