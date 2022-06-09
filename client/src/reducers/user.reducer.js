@@ -7,7 +7,7 @@ export default function userReducer(state = initialState, action) {
         case GET_USER:
             return action.payload
         case DELETE_USER:
-            return state.user._id
+            return action.payload
         default:
             return state
     }

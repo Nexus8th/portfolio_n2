@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { dateParser } from '../components/Context/Utils'
 import './dashboard.scss'
 import { deleteUser } from '../actions/user.actions'
+import axios from 'axios'
+import cookie from 'js-cookie'
 
 
 function Dashboard() {
@@ -16,7 +18,25 @@ function Dashboard() {
   const dispatch = useDispatch()
 
   const deleteAccount = () => {
-    dispatch(deleteUser(userData._id))
+    dispatch(deleteUser(uid))
+  }
+
+  const removeCookie = (key) => {
+    if (window !== "undefined") {
+      cookie.remove(key, { expires: 1 })
+    }
+  }
+
+  const logout = async () => {
+    await axios({
+      method: "get",
+      url: `${process.env.REACT_APP_API_URL}api/user/logout`,
+      withCredentials: true
+    })
+    .then(() => removeCookie('jwt'))
+    .catch((err) => console.log(err))
+
+    window.location = "/"
   }
 
   return (
@@ -33,7 +53,8 @@ function Dashboard() {
           <h3>Created at: {dateParser(userData.createdAt)}</h3>
           <button onClick={() => {
             if (window.confirm('Are you sure you want to delete this account ?')) {
-                deleteAccount()
+                deleteAccount() 
+                logout()
             }
         }} >DELETE ACCOUNT</button>
         </div>
