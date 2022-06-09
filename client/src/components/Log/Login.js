@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import './login.scss'
 import axios from 'axios'
+import backgroundVideo from '../../assets/video/backgroundVideo.mp4'
 
 function Login() {
 
@@ -27,7 +28,7 @@ function Login() {
     })
     .then((res) => {
       if (res.data.errors) {
-        emailError.innerHTML = res.data.errors.email
+        emailError.innerHTML = res.data.errors.mail
         passwordError.innerHTML = res.data.errors.password
       } else {
         window.location = '/dashboard'
@@ -47,34 +48,35 @@ function Login() {
   }
 
   return (
-    <div className="login-background-parallax">
       <>
-      <Header/>
-      <div className="login-all-container">
-        <form className="login-form" action="" method="get" onSubmit={handleLogin}>
+        <video autoPlay loop playsInline disablePictureInPicture className="home-background-video" muted>
+            <source src={backgroundVideo} type="video/mp4" />
+        </video>
+        <Header/>
+        <div className="login-all-container">
+          <form className="login-form" action="" method="get" onSubmit={handleLogin}>
 
-          <h1 className="login-h1">Connection</h1>
+            <h1 className="login-h1">Connection</h1>
 
-          <label className="login-label" htmlFor="email">Mail</label>
-          {/* Handling email errors messages display */}
-          <div className="login-email-error"></div>
-          <input className="login-input" type="text" name="email" required onChange={(e) => setEmail(e.target.value)} value={email}></input>
-
-
-          <label className="login-label" htmlFor="password">Password</label>
-          {/* Handling password errors messages display */}
-          <div className="login-password-error"></div>
-          <input className="login-input" type="password" name="password" onChange={(e) => setPassword(e.target.value)} value={password}></input>
+            <label className="login-label" htmlFor="email">Mail</label>
+            {/* Handling email errors messages display */}
+            <div className="login-email-error"></div>
+            <input className="login-input" type="text" name="email" required onChange={(e) => setEmail(e.target.value)} value={email}></input>
 
 
-          <button className="login-btn" type="submit">Login</button>
+            <label className="login-label" htmlFor="password">Password</label>
+            {/* Handling password errors messages display */}
+            <div className="login-password-error"></div>
+            <input className="login-input" type="password" name="password" onChange={(e) => setPassword(e.target.value)} value={password}></input>
 
-          <p className="login-p">New member?&nbsp;<a className="login-a" href="# " onClick={signupRoute}>&nbsp;Sign-up here!</a></p>
-        </form>
-      </div>
-      <Footer/>
+
+            <button className="login-btn" type="submit">Login</button>
+
+            <p className="login-p">New member?&nbsp;<a className="login-a" href="# " onClick={signupRoute}>&nbsp;Sign-up here!</a></p>
+          </form>
+        </div>
+        <Footer/>
       </>
-    </div>
   )
 }
 

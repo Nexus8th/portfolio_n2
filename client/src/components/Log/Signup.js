@@ -6,6 +6,7 @@ import Header from '../Header/Header'
 import axios from 'axios'
 import { useState } from 'react'
 import Login from './Login'
+import backgroundVideo from '../../assets/video/backgroundVideo.mp4'
 import './signup.scss'
 
 
@@ -65,6 +66,9 @@ function Signup() {
 
   return (
     <>
+      <video autoPlay loop playsInline disablePictureInPicture className="home-background-video" muted>
+          <source src={backgroundVideo} type="video/mp4" />
+      </video>
       {formSubmit ? (
         <>
           <Login/>

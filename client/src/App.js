@@ -35,7 +35,7 @@ function App() {
     fetchToken()
 
     if(uid) dispatch(getUser(uid))
-  }, [uid])
+  }, [uid, dispatch])
   
 
   return (

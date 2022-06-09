@@ -9,6 +9,7 @@ import './dashboard.scss'
 import { deleteUser } from '../actions/user.actions'
 import axios from 'axios'
 import cookie from 'js-cookie'
+import backgroundVideo from '../assets/video/backgroundVideo.mp4'
 
 
 function Dashboard() {
@@ -41,6 +42,9 @@ function Dashboard() {
 
   return (
     <>
+      <video autoPlay loop playsInline disablePictureInPicture className="home-background-video" muted>
+        <source src={backgroundVideo} type="video/mp4" />
+      </video>
       {uid ? (
         <>
         <Header/>
@@ -51,7 +55,7 @@ function Dashboard() {
           <h3>Mail: {userData.email}</h3>
           <h3>userID: {userData._id}</h3>
           <h3>Created at: {dateParser(userData.createdAt)}</h3>
-          <button onClick={() => {
+          <button className="dashboard-delete-btn" onClick={() => {
             if (window.confirm('Are you sure you want to delete this account ?')) {
                 deleteAccount() 
                 logout()
