@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import './login.scss'
 import axios from 'axios'
-import backgroundVideo from '../../assets/video/backgroundVideo.mp4'
 
 function Login() {
 
@@ -49,9 +48,6 @@ function Login() {
 
   return (
       <>
-        <video autoPlay loop playsInline disablePictureInPicture className="home-background-video" muted>
-            <source src={backgroundVideo} type="video/mp4" />
-        </video>
         <Header/>
         <div className="login-all-container">
           <form className="login-form" action="" method="get" onSubmit={handleLogin}>

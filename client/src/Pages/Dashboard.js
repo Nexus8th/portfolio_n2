@@ -9,7 +9,6 @@ import './dashboard.scss'
 import { deleteUser } from '../actions/user.actions'
 import axios from 'axios'
 import cookie from 'js-cookie'
-import backgroundVideo from '../assets/video/backgroundVideo.mp4'
 
 
 function Dashboard() {
@@ -42,9 +41,6 @@ function Dashboard() {
 
   return (
     <>
-      <video autoPlay loop playsInline disablePictureInPicture className="home-background-video" muted>
-        <source src={backgroundVideo} type="video/mp4" />
-      </video>
       {uid ? (
         <>
         <Header/>

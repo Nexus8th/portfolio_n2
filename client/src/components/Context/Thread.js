@@ -15,7 +15,7 @@ const Thread = () => {
             dispatch(getPosts())
             setLoadPost(false)
         }
-    }, [loadPost])
+    }, [loadPost, dispatch])
 
     return (
         <div className="thread-container">

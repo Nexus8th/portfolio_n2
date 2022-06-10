@@ -13,9 +13,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
-.home-background-video {
+/* .home-background-video {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -23,7 +24,7 @@ body {
   min-height: 100%;
   opacity: 0.5;
   z-index: -1;
-}
+} */
 
 #root {
   min-height: 100vh;
