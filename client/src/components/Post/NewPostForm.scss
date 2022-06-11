@@ -1,15 +1,27 @@
+$font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$bgcolor1: #17171f;
+$bgcolor2: rgb(153,0,0);
+$bgcolor3: rgb(5,5,5);
+
 .post-container {
     position: relative;
     display: flex;
-    width: 50%;
-    min-height: 250px;
-    max-height: 250px;
-    margin: 25px 0 0 0;
-    padding: 0;
     justify-content: center;
     align-items: center;
-    border: 2px solid blue;
-    background: grey;
+    flex-direction: column;
+    width: 1000px;
+    max-width: 10000px;
+    height: 100%;
+    min-height: 500px;
+    max-height: 1000px;
+    margin: 50px 0 0 0;
+    padding: 0;
+    font-family: $font;
+    background-color: $bgcolor1;
+    color: white;
+    opacity: 0.9;
+    border-radius: 8px;
+    box-shadow: 3px 3px 4px 2px $bgcolor3, -2px -2px 4px $bgcolor3;
 }
 
 .post-form {

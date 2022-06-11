@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { deletePost } from "../../actions/post.actions";
+import './deletecard.scss';
 
 const DeleteCard = (props) => {
     const dispatch = useDispatch()
@@ -9,7 +10,7 @@ const DeleteCard = (props) => {
     }
 
     return (
-        <button onClick={() => {
+        <button className="deletecard-btn" onClick={() => {
             if (window.confirm('Are you sure you want to delete this post ?')) {
                 deleteQuote()
             }

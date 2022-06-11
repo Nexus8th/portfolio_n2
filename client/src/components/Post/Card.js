@@ -48,8 +48,8 @@ const Card = ({ post }) => {
           )}
 
           {userData._id === post.posterId && (
-            <div>
-              <button onClick={() => setIsUpdated(!isUpdated)}>UPDATE</button>
+            <div className="card-btns">
+              <button className="card-update-btn" onClick={() => setIsUpdated(!isUpdated)}>UPDATE</button>
               <DeleteCard id={post._id}/>
             </div>
           )}
