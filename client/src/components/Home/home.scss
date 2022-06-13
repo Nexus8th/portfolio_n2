@@ -4,3 +4,30 @@ $bgcolor2: rgb(153,0,0);
 $bgcolor3: rgb(5,5,5);
 
 
+.home-welcome-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 50px 0 0 75px;
+    width: 1300px;
+    max-width: 10000px;
+    height: 350px;
+    min-height: 300px;
+    max-height: 1000px;
+    padding: 0;
+    font-family: $font;
+    background-color: $bgcolor1;
+    color: white;
+    opacity: 0.9;
+    border-radius: 8px;
+    box-shadow: 15px 15px 20px 15px $bgcolor3;
+}
+
+.home-welcome-text {
+    position: relative;
+    display: flex;
+    margin: 55px;
+    font-family: $font;
+    font-size: 50px;
+    font-weight: 700;
+}

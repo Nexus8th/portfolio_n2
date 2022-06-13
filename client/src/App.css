@@ -8,12 +8,12 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url('../public/img/art-g392add423_1920.jpg');
+  background-image: linear-gradient(grey, red), url('../public/img/art-g392add423_1920.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  background-blend-mode: darken;
 }
 
 .home-background-video {
@@ -31,6 +31,7 @@ body {
 }
 
 ::-webkit-scrollbar {
+  overflow: auto;
   width:5px;
 }
 
