@@ -1,5 +1,5 @@
 .footer-container {
-    position: relative;
+    position: absolute;
     display: flex;
     width: 100vw;
     height: 6vh;
@@ -10,6 +10,7 @@
     background-color: rgba($color: #17171f, $alpha: 1.0);
     opacity: 0.8;
     margin-top: 35px;
+    bottom: 0;
 }
 
 .footer-ul {

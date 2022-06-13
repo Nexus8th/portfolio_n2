@@ -7,7 +7,7 @@ $bgcolor3: rgb(5,5,5);
 .home-welcome-container {
     position: relative;
     display: flex;
-    margin: 50px 50px 75px 75px;
+    margin: 150px 75px 50px 75px;
     width: auto;
     height: auto;
     padding: 0;
@@ -49,5 +49,50 @@ $bgcolor3: rgb(5,5,5);
 @keyframes blink {
     50% {
         opacity: 0.5;
+    }
+}
+
+.home-scrolldown-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    padding: 0;
+}
+
+.home-scrolldown-logo {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid $bgcolor2;
+    border-right: 5px solid $bgcolor2;
+    transform: rotate(45deg);
+    box-shadow: 6px 6px 2px $bgcolor3;
+    margin: -3px;
+    animation: animate 2s infinite;
+
+    &:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-10px, -10px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(10px, 10px);
     }
 }

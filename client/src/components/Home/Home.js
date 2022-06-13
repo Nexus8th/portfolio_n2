@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 
 /* Text Animation sentences */
-const textAnimation = 'Hi, welcome to my portfolio, my name is Julien Stoll and i am a Junior Web Developer ...'
+const textAnimation = 'Hi, welcome to my portfolio, my name is Julien Stoll and i am learning Web Development ...'
 
 function Home() {
 
@@ -42,6 +42,11 @@ function Home() {
       <Header />
       <div className="home-welcome-container">
         <p className="home-welcome-text text-animation">{' '}{animation}</p>
+      </div>
+      <div className="home-scrolldown-block">
+        <span className="home-scrolldown-logo"></span>
+        <span className="home-scrolldown-logo"></span>
+        <span className="home-scrolldown-logo"></span>
       </div>
       <Footer />
     </>
