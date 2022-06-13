@@ -3,20 +3,6 @@ $bgcolor1: #17171f;
 $bgcolor2: rgb(153,0,0);
 $bgcolor3: rgb(5,5,5);
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-:root {
-  --color-primary: #f6aca2;
-  --color-secondary: #f49b90;
-  --color-tertiary: #f28b7d;
-  --color-quaternary: #f07a6a;
-  --color-quinary: #ee6352;
-}
-
 
 .home-welcome-container {
     position: relative;
@@ -42,13 +28,33 @@ $bgcolor3: rgb(5,5,5);
     display: inline-block;
     margin: 55px;
     font-family: $font;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 700;
-    text-shadow: 6px 6px 4px $bgcolor3;
+    text-shadow: 6px 6px 3px $bgcolor3;
 }
 
 .home-text-span {
     white-space: nowrap;
     color: $bgcolor2;
     font-size: larger;
+}
+
+.text-animation:after {
+    content: '|';
+    color: white;
+    animation: blink 1s step-start infinite;
+    text-shadow: none;
+    border: none;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 50%;
+    }
+    100% {
+        opacity: 100%;
+    }
 }

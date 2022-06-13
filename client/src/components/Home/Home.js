@@ -1,13 +1,28 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import "./home.scss";
+import { useEffect, useState } from "react";
 
 /* The imported currently not working animated background */
 /* import backgroundVideo from '../../assets/video/backgroundVideo.webm' */
 
+
+/* Text Animation sentences */
+const textAnimation = 'Hi, Welcome to my portfolio, my name is '
+const textAnimationTwo = 'Julien Stoll '
+const textAnimationThree = 'and i am a Junior Web Developer ...'
+
 function Home() {
 
-  
+  /* Animation States */
+  const [animation, setAnimation] = useState('')
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setAnimation(textAnimation.slice(0, animation.length +1))
+    }, 75)
+
+    return () => clearTimeout(timeout)
+  }, [animation])
 
   return (
     <>
@@ -27,7 +42,7 @@ function Home() {
 
       <Header />
       <div className="home-welcome-container">
-        <p className="home-welcome-text">Hi ,<br/> Welcome to my portfolio, my name is <span className="home-text-span">Julien Stoll</span> and i am a Junior Web Developer . . .</p>
+        <p className="home-welcome-text text-animation">{' '}{animation}</p>
       </div>
       <Footer />
     </>
