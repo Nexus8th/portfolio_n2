@@ -1,3 +1,4 @@
+
 * {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -8,7 +9,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(grey, red), url('../public/img/art-g392add423_1920.jpg');
+  background-image: linear-gradient(grey, rgb(153, 0, 0)), url('../public/img/art-g392add423_1920.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -33,6 +34,7 @@ body {
 ::-webkit-scrollbar {
   overflow: auto;
   width:5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {

@@ -8,14 +8,13 @@ import { useEffect, useState } from "react";
 
 
 /* Text Animation sentences */
-const textAnimation = 'Hi, Welcome to my portfolio, my name is '
-const textAnimationTwo = 'Julien Stoll '
-const textAnimationThree = 'and i am a Junior Web Developer ...'
+const textAnimation = 'Hi, welcome to my portfolio, my name is Julien Stoll and i am a Junior Web Developer ...'
 
 function Home() {
 
   /* Animation States */
   const [animation, setAnimation] = useState('')
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setAnimation(textAnimation.slice(0, animation.length +1))

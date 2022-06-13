@@ -7,13 +7,9 @@ $bgcolor3: rgb(5,5,5);
 .home-welcome-container {
     position: relative;
     display: flex;
-    align-items: center;
-    margin: 50px 0 0 75px;
-    width: 1300px;
-    max-width: 10000px;
-    height: 350px;
-    min-height: 300px;
-    max-height: 1000px;
+    margin: 50px 50px 75px 75px;
+    width: auto;
+    height: auto;
     padding: 0;
     font-family: $font;
     background-color: $bgcolor1;
@@ -26,6 +22,9 @@ $bgcolor3: rgb(5,5,5);
 .home-welcome-text {
     position: relative;
     display: inline-block;
+    align-items: center;
+    width: 200rem;
+    height: 11rem;
     margin: 55px;
     font-family: $font;
     font-size: 45px;
@@ -34,9 +33,9 @@ $bgcolor3: rgb(5,5,5);
 }
 
 .home-text-span {
-    white-space: nowrap;
     color: $bgcolor2;
     font-size: larger;
+    white-space: nowrap;
 }
 
 .text-animation:after {
@@ -48,13 +47,7 @@ $bgcolor3: rgb(5,5,5);
 }
 
 @keyframes blink {
-    0% {
-        opacity: 0%;
-    }
     50% {
-        opacity: 50%;
-    }
-    100% {
-        opacity: 100%;
+        opacity: 0.5;
     }
 }
