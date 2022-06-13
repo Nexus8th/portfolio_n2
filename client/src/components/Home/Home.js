@@ -7,9 +7,7 @@ import "./home.scss";
 
 function Home() {
 
-  const animatedText = () => {
-    
-  }
+  
 
   return (
     <>
@@ -29,7 +27,7 @@ function Home() {
 
       <Header />
       <div className="home-welcome-container">
-        <p className="home-welcome-text">Hi ,<br/> Welcome to my portfolio, my name is Julien Stoll and i am a Junior Web Developer . . .</p>
+        <p className="home-welcome-text">Hi ,<br/> Welcome to my portfolio, my name is <span className="home-text-span">Julien Stoll</span> and i am a Junior Web Developer . . .</p>
       </div>
       <Footer />
     </>
