@@ -7,7 +7,8 @@ $bgcolor4: #047e29;
 // The whole page container
 .contact-container {
     position: relative;
-    display: flexbox;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
