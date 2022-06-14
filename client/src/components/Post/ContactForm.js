@@ -46,10 +46,13 @@ const ContactForm = () => {
           <form onSubmit={handleSubmit} className="contact-form">
             <label htmlFor="name" className="contact-form-label">Name :</label>
             <input type="text" name="name" className="contact-form-name form-input" placeholder="Name" required></input>
+
             <label htmlFor="email" className="contact-form-label">Mail :</label>
             <input type="email" name="email" className="contact-form-mail form-input" placeholder="Mail" required></input>
+
             <label htmlFor="message" className="contact-form-label">Message :</label>
             <textarea name="message" className="contact-form-message form-input" placeholder="Message" required></textarea>
+            
             <button type="submit" className="contact-form-send-btn">{status}</button>
           </form>
     );
