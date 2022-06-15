@@ -12,9 +12,10 @@ $bgcolor4: #047e29;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0;
     width: 45%;
     height: 40rem;
-    margin: 50px 35px 35px 60px;
+    margin-bottom: 150px;
     font-family: $font;
     background-color: $bgcolor1;
     color: white;
@@ -40,7 +41,10 @@ $bgcolor4: #047e29;
 }
 .contact-form-message {
     width: 28rem;
+    max-width: 28rem;
     height: 12rem;
+    max-height: 12rem;
+    resize: none;
     padding: 15px;
 }
 .contact-form-send-btn {

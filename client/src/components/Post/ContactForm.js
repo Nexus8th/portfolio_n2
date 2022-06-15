@@ -43,6 +43,7 @@ const ContactForm = () => {
     }
 
     return (
+        
           <form onSubmit={handleSubmit} className="contact-form">
             <label htmlFor="name" className="contact-form-label">Name :</label>
             <input type="text" name="name" className="contact-form-name form-input" placeholder="Name" required></input>
