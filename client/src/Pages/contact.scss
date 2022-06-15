@@ -30,6 +30,7 @@ $bgcolor4: #047e29;
     position: relative;
     display: flex;
     color: white;
+    z-index: 1;
     font-family: $font;
     animation: glowing 2.5s infinite alternate;
 }
