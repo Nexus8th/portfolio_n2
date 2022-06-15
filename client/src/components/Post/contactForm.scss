@@ -21,12 +21,33 @@ $bgcolor4: #047e29;
     color: white;
     opacity: 0.9;
     border-radius: 8px;
-    box-shadow: 3px 3px 4px 2px $bgcolor3, -2px -2px 4px $bgcolor3,
-    0 0 20px rgb(255, 0, 34),
-    0 0 41px rgb(255, 0, 34),
-    0 0 46px rgb(255, 0, 34),
-    0 0 51px rgb(255, 0, 34),
-    0 0 75px rgb(255, 0, 34);;
+    box-shadow: 3px 3px 4px 2px $bgcolor3, -2px -2px 4px $bgcolor3;
+    animation: glowing 2.5s infinite alternate;
+}
+
+@keyframes glowing {
+    100% {
+        box-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(255, 0, 34),
+        0 0 80px rgb(255, 0, 34),
+        0 0 90px rgb(255, 0, 34),
+        0 0 100px rgb(255, 0, 34),
+        0 0 150px rgb(255, 0, 34);
+    }
+    0% {
+        box-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 10px rgb(255, 0, 34),
+        0 0 45px rgb(255, 0, 34),
+        0 0 55px rgb(255, 0, 34),
+        0 0 70px rgb(255, 0, 34),
+        0 0 80px rgb(255, 0, 34);
+    }
 }
 .contact-form-label {
     margin: 30px 0 10px 0;
