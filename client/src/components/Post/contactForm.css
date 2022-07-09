@@ -1,0 +1,73 @@
+.contact-form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 45%;
+  height: 40rem;
+  margin: 50px 35px 35px 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #17171f;
+  color: white;
+  opacity: 0.9;
+  border-radius: 8px;
+  -webkit-box-shadow: 3px 3px 4px 2px #050505, -2px -2px 4px #050505;
+          box-shadow: 3px 3px 4px 2px #050505, -2px -2px 4px #050505;
+}
+
+.contact-form-label {
+  margin: 30px 0 10px 0;
+  text-shadow: 2px 2px #050505;
+  color: white;
+  font-size: larger;
+}
+
+.form-input {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: none;
+  border-radius: 4px;
+  width: 18rem;
+  height: 2rem;
+  padding: 3px 3px 3px 10px;
+  -webkit-box-shadow: 2px 2px 2px 1px #050505;
+          box-shadow: 2px 2px 2px 1px #050505;
+  font-size: large;
+}
+
+.contact-form-message {
+  width: 28rem;
+  height: 12rem;
+  padding: 15px;
+}
+
+.contact-form-send-btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: 700;
+  background: #047e29;
+  padding: 5px 7px 6px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 1;
+  font-size: medium;
+  margin-top: 25px;
+  -webkit-box-shadow: 2px 2px 2px 1px #050505;
+          box-shadow: 2px 2px 2px 1px #050505;
+  text-shadow: 1.5px 1.5px #050505;
+}
+/*# sourceMappingURL=contactForm.css.map */

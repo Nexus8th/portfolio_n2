@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 
 /* Text Animation sentences */
-const textAnimation = 'Hi, welcome to my portfolio, my name is Julien Stoll and i am learning Web Development ...'
+const textAnimation = 'Hi, welcome to my portfolio, my name is Julien Stoll and i am learning Web Development ... This is a work in progress, many things are broken (*cough* responsive *cough*) ..'
 
 function Home() {
 

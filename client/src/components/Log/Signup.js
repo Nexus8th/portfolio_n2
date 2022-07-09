@@ -68,7 +68,7 @@ function Signup() {
       {formSubmit ? (
         <>
           <Login/>
-          <h4 className="signup-register-success">Register succesful, please Login !</h4>
+          <h4 className="signup-register-success">Register successful, please Login !</h4>
         </>
         ) : (
           <>
