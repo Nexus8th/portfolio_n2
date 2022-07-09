@@ -8,11 +8,9 @@ $bgcolor4: #047e29;
 .contact-container {
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
 }
 
 
@@ -24,13 +22,40 @@ $bgcolor4: #047e29;
     align-items: center;
     justify-content: center;
     margin: 35px auto 35px auto;
-    width: 50%;
-    height: 5em;
-    border: 2px solid blue;
+    width: 18%;
+    height: 4em;
+    
 }
 .contact-title-h1 {
     position: relative;
     display: flex;
     color: white;
+    z-index: 1;
     font-family: $font;
+    animation: glowing 2.5s infinite alternate;
+}
+
+@keyframes glowing {
+    100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(255, 0, 34),
+        0 0 80px rgb(255, 0, 34),
+        0 0 90px rgb(255, 0, 34),
+        0 0 100px rgb(255, 0, 34),
+        0 0 150px rgb(255, 0, 34);
+    }
+    0% {
+        text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 10px rgb(255, 0, 34),
+        0 0 45px rgb(255, 0, 34),
+        0 0 55px rgb(255, 0, 34),
+        0 0 70px rgb(255, 0, 34),
+        0 0 80px rgb(255, 0, 34);
+    }
 }

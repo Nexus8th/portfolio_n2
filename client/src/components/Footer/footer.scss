@@ -1,7 +1,7 @@
 .footer-container {
     position: absolute;
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 6vh;
     min-height: 35px;
     justify-content: center;
@@ -9,7 +9,6 @@
     text-decoration: none;
     background-color: rgba($color: #17171f, $alpha: 1.0);
     opacity: 0.8;
-    margin-top: 35px;
     bottom: 0;
 }
 

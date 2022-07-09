@@ -12,16 +12,43 @@ $bgcolor4: #047e29;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0;
     width: 45%;
     height: 40rem;
-    margin: 50px 35px 35px 60px;
+    margin-bottom: 150px;
     font-family: $font;
     background-color: $bgcolor1;
     color: white;
     opacity: 0.9;
     border-radius: 8px;
-    box-shadow: 3px 3px 4px 2px $bgcolor3, -2px -2px 4px $bgcolor3;
+    animation: glow 2.5s infinite alternate;
 }
+
+@keyframes glow {
+    100% {
+        box-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(255, 0, 34),
+        0 0 80px rgb(255, 0, 34),
+        0 0 90px rgb(255, 0, 34),
+        0 0 100px rgb(255, 0, 34),
+        0 0 150px rgb(255, 0, 34);
+    }
+    0% {
+        box-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 10px rgb(255, 0, 34),
+        0 0 45px rgb(255, 0, 34),
+        0 0 55px rgb(255, 0, 34),
+        0 0 70px rgb(255, 0, 34),
+        0 0 80px rgb(255, 0, 34);
+    }
+}
+
 .contact-form-label {
     margin: 30px 0 10px 0;
     text-shadow: 2px 2px $bgcolor3;
@@ -40,7 +67,10 @@ $bgcolor4: #047e29;
 }
 .contact-form-message {
     width: 28rem;
+    max-width: 28rem;
     height: 12rem;
+    max-height: 12rem;
+    resize: none;
     padding: 15px;
 }
 .contact-form-send-btn {
