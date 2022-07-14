@@ -9,6 +9,9 @@ const cors = require('cors')
 const app = express()
 const nodemailer = require("nodemailer")
 const router = express.Router()
+const path = require('path')
+const port = process.env.PORT || 5000
+const secret = process.env.TOKEN_SECRET
 
 const corsOptions = {
     origin: process.env.CLIENT_URL,
@@ -20,6 +23,7 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions))
+app.use(express.static(path.join(__dirname, 'public', 'build')))
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(cookieParser())
@@ -34,6 +38,11 @@ app.get('/jwtid', requireAuth, (req, res) => {
 //routes
 app.use('/api/user', userRoutes)
 app.use('/api/post', postRoutes)
+
+//heroku API connection
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'build', 'index.html'));
+})
 
 //server
 app.listen(process.env.PORT, () => {

@@ -2,9 +2,12 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "public/index.js",
   "scripts": {
-    "start": "nodemon index"
+    "install:client": "cd ./public && npm install",
+    "build": "cd public && npm install && npm run build",
+    "heroku-postbuild": "npm run install:client && npm run build",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -19,5 +22,8 @@
     "nodemailer": "^6.7.5",
     "nodemon": "^2.0.16",
     "validator": "^13.7.0"
+  },
+  "engine": {
+    "node": "16.x"
   }
 }
