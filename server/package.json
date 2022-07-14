@@ -7,7 +7,7 @@
     "install:client": "cd ./public && npm install",
     "build": "cd public && npm install && npm run build",
     "heroku-postbuild": "npm run install:client && npm run build",
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
